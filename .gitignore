@@ -1,0 +1,2 @@
+# Large video files (host separately or use Git LFS)
+images/*.mp4

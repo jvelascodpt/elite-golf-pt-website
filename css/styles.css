@@ -1,6 +1,8 @@
 /* ==================== FONTS ==================== */
 body {
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .font-heading,
@@ -17,7 +19,7 @@ h1, h2, h3, h4 {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
@@ -26,22 +28,24 @@ h1, h2, h3, h4 {
 }
 
 .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-.delay-100 { animation-delay: 0.1s; opacity: 0; }
-.delay-200 { animation-delay: 0.2s; opacity: 0; }
-.delay-300 { animation-delay: 0.3s; opacity: 0; }
+.delay-50  { animation-delay: 0.05s; opacity: 0; }
+.delay-100 { animation-delay: 0.15s; opacity: 0; }
+.delay-200 { animation-delay: 0.3s; opacity: 0; }
+.delay-300 { animation-delay: 0.45s; opacity: 0; }
 
 /* ==================== SCROLL REVEAL ==================== */
 .reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
@@ -49,27 +53,54 @@ h1, h2, h3, h4 {
     transform: translateY(0);
 }
 
+/* ==================== HERO BACKGROUNDS ==================== */
+.bg-radial-glow {
+    background: radial-gradient(ellipse at center, rgba(22, 61, 34, 0.4) 0%, rgba(15, 43, 24, 0.2) 40%, transparent 70%);
+}
+
+.grain-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.line-pattern {
+    background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 100% 80px;
+    pointer-events: none;
+}
+
+/* ==================== SCROLL LINE INDICATOR ==================== */
+.scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(201, 168, 76, 0.6), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+    50% { opacity: 1; transform: scaleY(1); }
+}
+
 /* ==================== HEADER ==================== */
 #header {
     background: transparent;
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #header.scrolled {
-    background: rgba(26, 58, 26, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-}
-
-#header.scrolled .nav-link {
-    color: rgba(255, 255, 255, 0.9);
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 /* ==================== SMOOTH SCROLL ==================== */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 112px;
 }
 
 /* ==================== FAQ ==================== */
@@ -84,7 +115,8 @@ html {
 .faq-content {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .faq-item.active .faq-content {
@@ -94,34 +126,33 @@ html {
 
 /* ==================== SELECTION ==================== */
 ::selection {
-    background: rgba(45, 106, 63, 0.3);
-    color: #1a3a1a;
+    background: rgba(201, 168, 76, 0.3);
+    color: #ffffff;
 }
 
-/* ==================== CUSTOM SCROLLBAR ==================== */
+/* ==================== SCROLLBAR ==================== */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f2faf4;
+    background: #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #a3d9b1;
-    border-radius: 4px;
+    background: #2e2e2e;
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #6bc285;
+    background: #3a3a3a;
 }
 
-/* ==================== FOCUS STYLES ==================== */
+/* ==================== FOCUS ==================== */
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid #c9a84c;
-    outline-offset: 2px;
-    border-radius: 4px;
+    outline: 1px solid rgba(201, 168, 76, 0.6);
+    outline-offset: 3px;
 }
 
 /* ==================== MOBILE CTA ==================== */
@@ -132,8 +163,8 @@ button:focus-visible {
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 640px) {
     h1 {
-        font-size: 2.5rem !important;
-        line-height: 1.15 !important;
+        font-size: 2.75rem !important;
+        line-height: 0.95 !important;
     }
 }
 
@@ -141,7 +172,12 @@ button:focus-visible {
 @media print {
     #header,
     #sticky-cta,
-    .animate-bounce {
+    .scroll-line {
         display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
     }
 }
