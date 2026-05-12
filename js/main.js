@@ -102,6 +102,25 @@ function updateSideGlows() {
 window.addEventListener('scroll', updateSideGlows, { passive: true });
 updateSideGlows();
 
+// ==================== REVIEW READ MORE TOGGLE ====================
+document.querySelectorAll('.review-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.parentElement;
+        const collapsed = card.querySelector('.review-collapsed');
+        const expanded = card.querySelector('.review-expanded');
+        const isExpanded = !expanded.classList.contains('hidden');
+        if (isExpanded) {
+            expanded.classList.add('hidden');
+            collapsed.classList.remove('hidden');
+            btn.textContent = 'Read more';
+        } else {
+            expanded.classList.remove('hidden');
+            collapsed.classList.add('hidden');
+            btn.textContent = 'Read less';
+        }
+    });
+});
+
 // ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
