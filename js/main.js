@@ -90,6 +90,18 @@ function updateStickyCta() {
 window.addEventListener('scroll', updateStickyCta, { passive: true });
 updateStickyCta();
 
+// ==================== AMBIENT SIDE GLOW (after hero) ====================
+const sideGlows = document.querySelectorAll('.side-glow');
+
+function updateSideGlows() {
+    const trigger = window.innerHeight * 0.85;
+    const show = window.scrollY > trigger;
+    sideGlows.forEach(g => g.classList.toggle('visible', show));
+}
+
+window.addEventListener('scroll', updateSideGlows, { passive: true });
+updateSideGlows();
+
 // ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

@@ -20,12 +20,12 @@
                 extend: {
                     colors: {
                         dark: {
-                            950: '#0a0a0a',
-                            900: '#111111',
-                            800: '#1a1a1a',
-                            700: '#242424',
-                            600: '#2e2e2e',
-                            500: '#3a3a3a',
+                            950: '#13131a',
+                            900: '#1c1c24',
+                            800: '#25252e',
+                            700: '#2f2f39',
+                            600: '#383843',
+                            500: '#42424d',
                         },
                         brand: {
                             900: '#0f2b18',
@@ -61,9 +61,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body class="font-body text-gray-300 bg-dark-950">
+
+    <!-- Ambient gold side glows (fixed, follow scroll) -->
+    <div class="side-glow side-glow-left" aria-hidden="true"></div>
+    <div class="side-glow side-glow-right" aria-hidden="true"></div>
 
     <!-- ==================== HEADER ==================== -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
@@ -181,7 +185,7 @@
                     </div>
                     <div class="w-px h-4 bg-brand-700/40"></div>
                     <div class="text-center">
-                        <p class="text-white/30 text-sm font-medium tracking-[0.2em] uppercase">75 Min Sessions</p>
+                        <p class="text-white/30 text-sm font-medium tracking-[0.2em] uppercase">All Skill Levels</p>
                     </div>
                     <div class="w-px h-4 bg-brand-700/40"></div>
                     <div class="text-center">
@@ -745,6 +749,6 @@
         </a>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=2"></script>
 </body>
 </html>
