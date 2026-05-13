@@ -61,7 +61,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=8">
 </head>
 <body class="font-body text-gray-300 bg-dark-950">
 
@@ -137,13 +137,15 @@
             <div class="text-center max-w-5xl mx-auto">
                 <!-- TPI Badge + Caption -->
                 <div class="flex flex-col items-center mb-10 animate-fade-in">
-                    <img src="images/tpi-certified-medical-level-3.png" alt="TPI Certified Medical Level 3"
-                         class="h-32 sm:h-40 w-auto mb-6">
-                    <div class="inline-flex items-center gap-3 border border-brand-500/30 bg-brand-900/30 backdrop-blur-sm px-6 py-2.5">
+                    <a href="tpi.html" class="block group" aria-label="Learn about TPI">
+                        <img src="images/tpi-certified-medical-level-3.png" alt="TPI Certified Medical Level 3"
+                             class="h-32 sm:h-40 w-auto mb-6 transition-transform duration-500 group-hover:scale-105">
+                    </a>
+                    <a href="tpi.html" class="inline-flex items-center gap-3 border border-brand-500/30 hover:border-brand-500/60 bg-brand-900/30 backdrop-blur-sm px-6 py-2.5 transition-colors duration-300">
                         <div class="w-1.5 h-1.5 bg-brand-400 rounded-full"></div>
                         <span class="text-brand-300 text-xs font-medium tracking-[0.25em] uppercase">Titleist Performance Institute Certified</span>
                         <div class="w-1.5 h-1.5 bg-brand-400 rounded-full"></div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Headline -->
@@ -271,13 +273,17 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="bg-dark-900 p-10 group hover:bg-dark-800 transition-all duration-500 reveal">
+                <a href="treatments.html" class="bg-dark-900 p-10 group hover:bg-dark-800 transition-all duration-500 reveal block">
                     <div class="w-10 h-10 flex items-center justify-center mb-8">
                         <svg class="w-8 h-8 text-brand-400 group-hover:text-brand-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                     </div>
-                    <h3 class="font-heading text-xl font-semibold text-white mb-4">Pain & Injury Rehab</h3>
-                    <p class="text-white/40 text-sm leading-relaxed">Targeted treatment for back, shoulder, hip, elbow, and wrist injuries keeping you off the course.</p>
-                </div>
+                    <h3 class="font-heading text-xl font-semibold text-white mb-4">Pain &amp; Injury Rehab</h3>
+                    <p class="text-white/40 text-sm leading-relaxed mb-4">Targeted treatment for back, shoulder, hip, elbow, and wrist injuries keeping you off the course.</p>
+                    <span class="inline-flex items-center gap-1.5 text-brand-400 group-hover:text-brand-300 text-xs font-medium tracking-wider uppercase transition-colors">
+                        See our techniques
+                        <svg class="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </span>
+                </a>
 
                 <!-- Service 3 -->
                 <div class="bg-dark-900 p-10 group hover:bg-dark-800 transition-all duration-500 reveal">
@@ -392,10 +398,10 @@
                         <!-- Decorative corner -->
                         <div class="absolute -bottom-4 -right-4 w-32 h-32 border-b border-r border-brand-500/20"></div>
                         <!-- TPI Credential Badge -->
-                        <div class="absolute -bottom-8 -left-8 sm:-bottom-10 sm:-left-12">
+                        <a href="tpi.html" aria-label="Learn about TPI" class="absolute -bottom-8 -left-8 sm:-bottom-10 sm:-left-12 block group">
                             <img src="images/tpi-certified-medical-level-3.png" alt="TPI Certified Medical Level 3"
-                                 class="h-40 sm:h-52 w-auto block drop-shadow-2xl">
-                        </div>
+                                 class="h-40 sm:h-52 w-auto block drop-shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                        </a>
                     </div>
                 </div>
 
@@ -861,6 +867,8 @@
                         <li><a href="#about" class="text-white/30 hover:text-white text-sm transition-colors duration-300">About</a></li>
                         <li><a href="#pricing" class="text-white/30 hover:text-white text-sm transition-colors duration-300">Pricing</a></li>
                         <li><a href="#faq" class="text-white/30 hover:text-white text-sm transition-colors duration-300">FAQ</a></li>
+                        <li><a href="tpi.html" class="text-white/30 hover:text-white text-sm transition-colors duration-300">What is TPI?</a></li>
+                        <li><a href="treatments.html" class="text-white/30 hover:text-white text-sm transition-colors duration-300">Manual Therapy</a></li>
                         <li><a href="https://app.acuityscheduling.com/schedule/d80e0bff" target="_blank" rel="noopener" class="text-gold-500 hover:text-gold-400 text-sm font-medium transition-colors duration-300">Book Now</a></li>
                     </ul>
                 </div>
@@ -900,6 +908,6 @@
         </a>
     </div>
 
-    <script src="js/main.js?v=3"></script>
+    <script src="js/main.js?v=5"></script>
 </body>
 </html>

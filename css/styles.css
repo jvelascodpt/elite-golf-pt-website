@@ -52,6 +52,42 @@ h1, h2, h3, h4 {
     .side-glow { display: none; }
 }
 
+/* ==================== TPI PAGE SECTION BACKGROUNDS ==================== */
+/* Photo behind the section content with a dark gradient overlay so headings
+   and body copy stay readable. Image opacity is moderate (full-opacity image
+   would compete with text) and the overlay fades darker at top/bottom edges
+   to blend cleanly into adjacent sections. */
+.tpi-section-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+.tpi-section-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+}
+.tpi-section-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+        rgba(19, 19, 26, 0.90) 0%,
+        rgba(19, 19, 26, 0.55) 30%,
+        rgba(19, 19, 26, 0.55) 70%,
+        rgba(19, 19, 26, 0.90) 100%);
+}
+.tpi-section-bg--hero img { opacity: 0.70; }
+.tpi-section-bg--hero::after {
+    background: linear-gradient(to bottom,
+        rgba(19, 19, 26, 0.65) 0%,
+        rgba(19, 19, 26, 0.55) 50%,
+        rgba(19, 19, 26, 0.95) 100%);
+}
+
 /* ==================== ANIMATIONS ==================== */
 @keyframes fadeIn {
     from { opacity: 0; }

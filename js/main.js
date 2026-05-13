@@ -78,29 +78,37 @@ document.querySelectorAll('.faq-toggle').forEach(button => {
 
 // ==================== STICKY MOBILE CTA ====================
 const stickyCta = document.getElementById('sticky-cta');
+if (stickyCta) {
+    const updateStickyCta = () => {
+        stickyCta.classList.toggle('visible', window.scrollY > 600);
+    };
+    window.addEventListener('scroll', updateStickyCta, { passive: true });
+    updateStickyCta();
+}
 
-function updateStickyCta() {
-    if (window.scrollY > 600) {
-        stickyCta.classList.add('visible');
+// ==================== AMBIENT SIDE GLOW ====================
+// On the home page (hero has a background video) the glow fades in after the
+// user scrolls past the hero so the video isn't tinted. On other pages there's
+// no video to protect, so the glow shows from the start and just fades in via
+// the CSS opacity transition.
+const sideGlows = document.querySelectorAll('.side-glow');
+if (sideGlows.length) {
+    const hasHeroVideo = document.querySelector('section video') !== null;
+    if (hasHeroVideo) {
+        const updateSideGlows = () => {
+            const show = window.scrollY > window.innerHeight * 0.85;
+            sideGlows.forEach(g => g.classList.toggle('visible', show));
+        };
+        window.addEventListener('scroll', updateSideGlows, { passive: true });
+        updateSideGlows();
     } else {
-        stickyCta.classList.remove('visible');
+        // Defer one frame so the initial opacity:0 paints first and the
+        // transition to opacity:1 actually runs (instead of snapping on).
+        requestAnimationFrame(() => {
+            sideGlows.forEach(g => g.classList.add('visible'));
+        });
     }
 }
-
-window.addEventListener('scroll', updateStickyCta, { passive: true });
-updateStickyCta();
-
-// ==================== AMBIENT SIDE GLOW (after hero) ====================
-const sideGlows = document.querySelectorAll('.side-glow');
-
-function updateSideGlows() {
-    const trigger = window.innerHeight * 0.85;
-    const show = window.scrollY > trigger;
-    sideGlows.forEach(g => g.classList.toggle('visible', show));
-}
-
-window.addEventListener('scroll', updateSideGlows, { passive: true });
-updateSideGlows();
 
 // ==================== REVIEW READ MORE TOGGLE ====================
 document.querySelectorAll('.review-toggle').forEach(btn => {
