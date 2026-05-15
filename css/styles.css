@@ -208,7 +208,7 @@ html {
 
 .faq-item.active .faq-content {
     display: block;
-    max-height: 300px;
+    max-height: 1200px;
 }
 
 /* ==================== SELECTION ==================== */
