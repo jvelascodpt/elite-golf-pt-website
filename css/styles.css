@@ -87,6 +87,15 @@ h1, h2, h3, h4 {
         rgba(19, 19, 26, 0.55) 50%,
         rgba(19, 19, 26, 0.95) 100%);
 }
+/* Quieter variant — image only a hint, copy stays dominant. */
+.tpi-section-bg--subtle img { opacity: 0.28; }
+.tpi-section-bg--subtle::after {
+    background: linear-gradient(to bottom,
+        rgba(19, 19, 26, 0.95) 0%,
+        rgba(19, 19, 26, 0.75) 30%,
+        rgba(19, 19, 26, 0.75) 70%,
+        rgba(19, 19, 26, 0.95) 100%);
+}
 
 /* ==================== ANIMATIONS ==================== */
 @keyframes fadeIn {
