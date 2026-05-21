@@ -1,2 +1,3 @@
-# Large video files (host separately or use Git LFS)
-images/*.mp4
+# OS / editor
+.DS_Store
+Thumbs.db
