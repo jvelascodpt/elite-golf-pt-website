@@ -1,0 +1,11 @@
+# Aggressive caching for static media so visitors don't re-download
+# every page load. Browsers will keep these files for up to a year.
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
