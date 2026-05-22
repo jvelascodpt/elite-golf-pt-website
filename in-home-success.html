@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Received | Elite Golf Physical Therapy</title>
+    <meta name="robots" content="noindex">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { 950: '#13131a', 900: '#1c1c24', 800: '#25252e', 700: '#2f2f39', 600: '#383843', 500: '#42424d' },
+                        brand: { 900: '#0f2b18', 800: '#163d22', 700: '#1e5530', 600: '#276e3f', 500: '#2d8a4e', 400: '#3da863', 300: '#6bc285', 200: '#a3d9b1', 100: '#d1edda' },
+                        gold: { 600: '#a8882e', 500: '#c9a84c', 400: '#d4b95f', 300: '#e0cc82', 200: '#eeddb0' }
+                    },
+                    fontFamily: { heading: ['"Playfair Display"', 'Georgia', 'serif'], body: ['"Inter"', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css?v=10">
+</head>
+<body class="font-body text-gray-300 bg-dark-950 min-h-screen flex flex-col">
+
+    <div class="side-glow side-glow-left" aria-hidden="true"></div>
+    <div class="side-glow side-glow-right" aria-hidden="true"></div>
+
+    <header class="pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+            <a href="index.html" class="inline-block">
+                <img src="images/logo-white.png" alt="Elite Golf Physical Therapy" class="h-24 sm:h-28 w-auto mx-auto">
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-1 flex items-center justify-center px-6 sm:px-8 lg:px-12 py-16">
+        <div class="max-w-2xl mx-auto text-center relative z-10">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-900/30 rounded-full blur-[150px] -z-10"></div>
+
+            <div class="inline-flex items-center justify-center w-16 h-16 border-2 border-brand-500 rounded-full mb-8">
+                <svg class="w-8 h-8 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+
+            <p class="text-brand-400 text-xs font-medium tracking-[0.3em] uppercase mb-6">Request Received</p>
+            <h1 class="font-heading text-3xl sm:text-5xl font-bold text-white leading-[1.1] mb-6">
+                Thanks for <span class="italic text-gold-400">reaching out</span>.
+            </h1>
+            <div class="w-20 h-px bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mb-8"></div>
+            <p class="text-lg text-white/60 leading-relaxed mb-10">
+                Dr. Velasco will review your request and contact you within 24 hours to confirm availability and walk you through next steps.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="index.html"
+                   class="px-10 py-6 bg-gold-500 hover:bg-gold-400 text-dark-950 font-bold text-sm tracking-[0.15em] uppercase transition-all duration-300">
+                    Back to Home
+                </a>
+                <a href="tel:6197362955"
+                   class="px-10 py-6 border border-white/20 hover:border-white/40 text-white/80 hover:text-white font-medium text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:bg-white/5">
+                    Or Call 619-736-2955
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark-950 border-t border-brand-900/40 py-8">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+            <p class="text-white/15 text-xs tracking-wider">&copy; 2026 Elite Golf Physical Therapy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
