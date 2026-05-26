@@ -577,9 +577,9 @@
         <div class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-brand-900/25 rounded-full blur-[150px] z-0"></div>
 
         <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="grid lg:grid-cols-2 gap-20 items-start">
-                <div class="reveal">
-                    <!-- Photo -->
+            <div class="grid lg:grid-cols-2 gap-x-20 gap-y-16 items-start">
+                <!-- Photo (mobile: 1st, desktop: col 1 row 1) -->
+                <div class="reveal lg:col-start-1 lg:row-start-1">
                     <div class="relative">
                         <div class="bg-gradient-to-b from-dark-700 to-dark-800 aspect-[4/5] overflow-hidden border border-white/5 flex items-end justify-center">
                             <img src="images/jeremy.png?v=2" alt="Dr. Jeremy Velasco, DPT, PT, CPT, TPI Medical Level 3"
@@ -593,19 +593,10 @@
                                  class="h-40 sm:h-52 w-auto block drop-shadow-2xl transition-transform duration-500 group-hover:scale-105">
                         </a>
                     </div>
-
-                    <!-- Certifications -->
-                    <div class="mt-44">
-                        <div class="grid grid-cols-2 gap-x-10 gap-y-14 items-center justify-items-center">
-                            <img src="images/tpi-certified-hex-white.png" alt="Titleist Performance Institute Certified" class="h-36 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
-                            <img src="images/gray-institute-logo.png" alt="Gray Institute" class="h-24 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
-                            <img src="images/sfma-logo.png" alt="SFMA - Selective Functional Movement Assessment" class="h-24 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
-                            <img src="images/nasm-logo.png" alt="NASM - National Academy of Sports Medicine" class="h-32 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
-                        </div>
-                    </div>
                 </div>
 
-                <div class="reveal">
+                <!-- About text (mobile: 2nd, desktop: col 2 spanning both rows) -->
+                <div class="reveal lg:col-start-2 lg:row-start-1 lg:row-span-2">
                     <p class="text-brand-400 text-xs font-medium tracking-[0.3em] uppercase mb-6">About</p>
                     <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mb-3 leading-tight">
                         Dr. Jeremy Velasco
@@ -658,6 +649,16 @@
                                 <span class="text-sm text-white/70">National Academy of Sports Medicine, Personal Trainer</span>
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                <!-- Certifications logos (mobile: 3rd after the bio, desktop: col 1 row 2 below photo) -->
+                <div class="reveal lg:col-start-1 lg:row-start-2 lg:mt-20">
+                    <div class="grid grid-cols-2 gap-x-10 gap-y-14 items-center justify-items-center">
+                        <img src="images/tpi-certified-hex-white.png" alt="Titleist Performance Institute Certified" class="h-36 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                        <img src="images/gray-institute-logo.png" alt="Gray Institute" class="h-24 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                        <img src="images/sfma-logo.png" alt="SFMA - Selective Functional Movement Assessment" class="h-24 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                        <img src="images/nasm-logo.png" alt="NASM - National Academy of Sports Medicine" class="h-32 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
                     </div>
                 </div>
             </div>
