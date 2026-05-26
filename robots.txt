@@ -32,3 +32,5 @@ Disallow: /
 # Politely ask all other crawlers to slow down to one page per 10 seconds
 User-agent: *
 Crawl-delay: 10
+
+Sitemap: https://elitegolfphysicaltherapy.com/sitemap.xml
