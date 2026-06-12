@@ -242,6 +242,7 @@
                     <a href="#how-it-works" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Process</a>
                     <a href="#pricing" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Pricing</a>
                     <a href="#faq" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">FAQ</a>
+                    <a href="#contact" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Contact</a>
                     <a href="location.html" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Location</a>
                     <a href="https://app.acuityscheduling.com/schedule/d80e0bff" target="_blank" rel="noopener"
                        class="ml-2 px-7 py-3 bg-gold-500 hover:bg-gold-400 text-dark-950 font-bold text-xs tracking-[0.15em] uppercase transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,76,0.3)]">
@@ -267,6 +268,7 @@
                 <a href="#how-it-works" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Process</a>
                 <a href="#pricing" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Pricing</a>
                 <a href="#faq" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">FAQ</a>
+                <a href="#contact" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Contact</a>
                 <a href="location.html" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Location</a>
                 <a href="https://app.acuityscheduling.com/schedule/d80e0bff" target="_blank" rel="noopener"
                    class="block mt-6 text-center px-6 py-4 bg-gold-500 hover:bg-gold-400 text-dark-950 font-bold text-sm tracking-wider uppercase transition-all">
@@ -1066,6 +1068,107 @@
         </div>
     </section>
 
+    <!-- ==================== CONTACT / INQUIRY FORM ==================== -->
+    <section id="contact" class="py-28 bg-dark-900 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-700/30 to-transparent z-10"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-900/20 rounded-full blur-[150px] z-0"></div>
+
+        <div class="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+            <div class="text-center mb-16">
+                <p class="text-brand-400 text-xs font-medium tracking-[0.3em] uppercase mb-6 reveal">Get In Touch</p>
+                <h2 class="font-heading text-4xl sm:text-5xl font-bold text-white mb-6 reveal leading-tight">
+                    Send Us a <span class="italic text-gold-400">Message</span>
+                </h2>
+                <div class="w-20 h-px bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mb-8 reveal"></div>
+                <p class="text-lg text-white/40 max-w-xl mx-auto leading-relaxed reveal">
+                    Have a question about your pain, your swing, or whether we can help? Fill out the form below and we'll get back to you within one business day.
+                </p>
+            </div>
+
+            <form id="inquiry-form" action="https://formspree.io/f/xykandgr" method="POST" class="reveal space-y-5">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div>
+                        <label for="inq-name" class="block text-white/50 text-xs font-medium tracking-[0.2em] uppercase mb-3">Name</label>
+                        <input type="text" id="inq-name" name="name" required
+                               class="w-full px-5 py-4 bg-dark-800/60 border border-white/10 text-white placeholder-white/30 focus:border-gold-500/50 focus:bg-dark-800 focus:outline-none transition-all duration-300"
+                               placeholder="Your full name">
+                    </div>
+                    <div>
+                        <label for="inq-email" class="block text-white/50 text-xs font-medium tracking-[0.2em] uppercase mb-3">Email</label>
+                        <input type="email" id="inq-email" name="email" required
+                               class="w-full px-5 py-4 bg-dark-800/60 border border-white/10 text-white placeholder-white/30 focus:border-gold-500/50 focus:bg-dark-800 focus:outline-none transition-all duration-300"
+                               placeholder="you@example.com">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="inq-phone" class="block text-white/50 text-xs font-medium tracking-[0.2em] uppercase mb-3">Phone <span class="text-white/30 normal-case tracking-normal">(optional)</span></label>
+                    <input type="tel" id="inq-phone" name="phone"
+                           class="w-full px-5 py-4 bg-dark-800/60 border border-white/10 text-white placeholder-white/30 focus:border-gold-500/50 focus:bg-dark-800 focus:outline-none transition-all duration-300"
+                           placeholder="(619) 555-0123">
+                </div>
+
+                <div>
+                    <label for="inq-message" class="block text-white/50 text-xs font-medium tracking-[0.2em] uppercase mb-3">Message</label>
+                    <textarea id="inq-message" name="message" rows="6" required
+                              class="w-full px-5 py-4 bg-dark-800/60 border border-white/10 text-white placeholder-white/30 focus:border-gold-500/50 focus:bg-dark-800 focus:outline-none transition-all duration-300 resize-none"
+                              placeholder="Tell us about your pain, your golf goals, or any questions you have..."></textarea>
+                </div>
+
+                <button type="submit" id="inquiry-submit"
+                        class="w-full px-10 py-5 bg-gold-500 hover:bg-gold-400 text-dark-950 font-bold text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:shadow-[0_0_40px_rgba(201,168,76,0.25)] disabled:opacity-50 disabled:cursor-not-allowed">
+                    Send Message
+                </button>
+
+                <div id="inquiry-success" class="hidden text-center py-6 px-8 bg-brand-900/20 border border-brand-700/40 text-brand-300 text-sm">
+                    Thanks for reaching out! We'll get back to you within one business day.
+                </div>
+                <div id="inquiry-error" class="hidden text-center py-6 px-8 bg-red-900/20 border border-red-700/40 text-red-300 text-sm">
+                    Sorry, something went wrong. Please try again, or email us directly at <a href="mailto:jeremy@elitegolfpt.com" class="underline">jeremy@elitegolfpt.com</a>.
+                </div>
+            </form>
+        </div>
+
+        <script>
+            (function() {
+                const form = document.getElementById('inquiry-form');
+                if (!form) return;
+                const submitBtn = document.getElementById('inquiry-submit');
+                const successEl = document.getElementById('inquiry-success');
+                const errorEl = document.getElementById('inquiry-error');
+
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    successEl.classList.add('hidden');
+                    errorEl.classList.add('hidden');
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+
+                    try {
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (response.ok) {
+                            form.reset();
+                            successEl.classList.remove('hidden');
+                        } else {
+                            errorEl.classList.remove('hidden');
+                        }
+                    } catch (err) {
+                        errorEl.classList.remove('hidden');
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                    }
+                });
+            })();
+        </script>
+    </section>
+
     <!-- ==================== FINAL CTA ==================== -->
     <section class="py-32 bg-dark-950 relative overflow-hidden">
         <div class="tpi-section-bg tpi-section-bg--subtle">
@@ -1116,6 +1219,7 @@
                         <li><a href="#about" class="text-white/30 hover:text-white text-sm transition-colors duration-300">About</a></li>
                         <li><a href="#pricing" class="text-white/30 hover:text-white text-sm transition-colors duration-300">Pricing</a></li>
                         <li><a href="#faq" class="text-white/30 hover:text-white text-sm transition-colors duration-300">FAQ</a></li>
+                        <li><a href="#contact" class="text-white/30 hover:text-white text-sm transition-colors duration-300">Contact</a></li>
                         <li><a href="education.html" class="text-white/30 hover:text-white text-sm transition-colors duration-300">How We Assess</a></li>
                         <li><a href="tpi.html" class="text-white/30 hover:text-white text-sm transition-colors duration-300">What is TPI?</a></li>
                         <li><a href="treatments.html" class="text-white/30 hover:text-white text-sm transition-colors duration-300">Treatment &amp; Training</a></li>
