@@ -184,6 +184,17 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
+/* Tighten the desktop nav typography so the wide menu (many links + Book Now)
+   doesn't crowd the logo. Narrower letter-spacing and a slightly smaller font
+   shrink the menu's overall width, pushing the first item clear of the logo.
+   Higher specificity than the Tailwind utilities so it reliably overrides them. */
+@media (min-width: 768px) {
+    #header .nav-link {
+        letter-spacing: 0.08em;
+        font-size: 0.7rem;
+    }
+}
+
 /* ==================== SMOOTH SCROLL ==================== */
 html {
     scroll-behavior: smooth;
