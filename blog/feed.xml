@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elite Golf Physical Therapy — Articles</title>
+    <link>https://elitegolfphysicaltherapy.com/blog/</link>
+    <description>Golf health and performance articles from Elite Golf Physical Therapy, a TPI Medical Level 3 certified golf physical therapist in San Diego.</description>
+    <language>en-us</language>
+    <atom:link href="https://elitegolfphysicaltherapy.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Golf and Lower Back Pain: Finding the Root Cause</title>
+      <link>https://elitegolfphysicaltherapy.com/blog/golf-lower-back-pain.html</link>
+      <guid isPermaLink="true">https://elitegolfphysicaltherapy.com/blog/golf-lower-back-pain.html</guid>
+      <description>Lower back pain is the most common golf injury, and usually a symptom, not the cause. Here's why the swing hurts your back, and how a PT evaluation finds the real root cause.</description>
+      <pubDate>Mon, 22 Jun 2026 09:00:00 -0700</pubDate>
+    </item>
+
+  </channel>
+</rss>
