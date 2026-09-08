@@ -135,9 +135,10 @@
     function render(data) {
         if (!data) return;
 
-        var ratingEl = document.querySelector('[data-review-rating]');
-        if (ratingEl && typeof data.rating === 'number') {
-            ratingEl.textContent = data.rating.toFixed(1);
+        if (typeof data.rating === 'number') {
+            document.querySelectorAll('[data-review-rating]').forEach(function (el) {
+                el.textContent = data.rating.toFixed(1);
+            });
         }
 
         if (typeof data.total === 'number') {
