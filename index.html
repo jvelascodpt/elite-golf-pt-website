@@ -381,45 +381,87 @@
 
     <!-- ==================== PROBLEM / PAIN POINTS ==================== -->
     <section class="py-28 bg-dark-950 relative overflow-hidden">
-        <!-- Subtle golf course background -->
-        <div class="tpi-section-bg tpi-section-bg--subtle">
-            <img src="images/golf-fairway.jpg" alt="">
-        </div>
-        <!-- Subtle accent -->
+        <div class="tpi-section-bg tpi-section-bg--subtle"><img src="images/golf-fairway.jpg" alt=""></div>
         <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-700/30 to-transparent z-10"></div>
-        <!-- Green ambient glow -->
         <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-900/30 rounded-full blur-[120px] z-0"></div>
 
-        <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
-            <p class="text-brand-400 text-xs font-medium tracking-[0.3em] uppercase mb-6 reveal">The Problem</p>
-            <h2 class="font-heading text-3xl sm:text-5xl font-bold text-white mb-8 reveal leading-tight">
-                Pain Shouldn't Keep You<br>Off the Course
-            </h2>
-            <p class="text-lg text-white/40 max-w-3xl mx-auto mb-16 reveal leading-relaxed">
-                If you're dealing with back pain, shoulder stiffness, hip tightness, or a nagging injury that's affecting your swing, you're not alone. Most golfers push through it, hoping it'll go away. It doesn't.
-            </p>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-dark-800 border border-white/5 p-8 reveal group hover:border-brand-500/20 transition-all duration-500">
-                    <div class="w-12 h-12 border border-red-500/30 flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold text-white mb-3">Playing Through Pain</h3>
-                    <p class="text-white/40 text-sm leading-relaxed">Every swing hurts, but you keep going because you love the game.</p>
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+
+            <!-- header: headline left, story right -->
+            <div class="grid lg:grid-cols-12 gap-x-16 gap-y-8 items-start mb-20">
+                <div class="lg:col-span-6">
+                    <p class="text-brand-400 text-xs font-medium tracking-[0.3em] uppercase mb-6 reveal">What We See Most</p>
+                    <h2 class="font-heading text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white reveal leading-[1.08]">
+                        Restrictions lead to<br>swing dysfunction.
+                    </h2>
                 </div>
-                <div class="bg-dark-800 border border-white/5 p-8 reveal group hover:border-brand-500/20 transition-all duration-500">
-                    <div class="w-12 h-12 border border-orange-500/30 flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/></svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold text-white mb-3">Losing Distance & Accuracy</h3>
-                    <p class="text-white/40 text-sm leading-relaxed">Your body can't move the way it used to, and your scores show it.</p>
+                <div class="lg:col-span-6 lg:pt-20">
+                    <p class="text-lg text-white/55 leading-relaxed reveal">
+                        For some golfers, it shows up as pain. For many more it starts quieter &mdash; swing
+                        compensations that don't get corrected lead to inadequate mechanics, resulting in pain
+                        and stiffness. Next thing you know, your body feels worse the days following.
+                    </p>
+                    <p class="text-lg text-white/40 leading-relaxed mt-5 reveal">
+                        Either way, you start swinging around it. That compensation is what keeps you in an endless loop.
+                    </p>
                 </div>
-                <div class="bg-dark-800 border border-white/5 p-8 reveal group hover:border-brand-500/20 transition-all duration-500">
-                    <div class="w-12 h-12 border border-yellow-500/30 flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
-                    </div>
-                    <h3 class="font-heading text-lg font-semibold text-white mb-3">Missing Rounds</h3>
-                    <p class="text-white/40 text-sm leading-relaxed">You're sitting out when you should be on the course with your friends.</p>
+            </div>
+
+            <!-- ============ CHEVRON PROGRESSION ============ -->
+
+            <!-- captions ABOVE (desktop: middle one only) -->
+            <div class="hidden md:grid grid-cols-3 gap-6 items-end">
+                <div></div>
+                <div class="text-center reveal px-2">
+                    <h3 class="font-heading text-xl font-semibold text-white mb-2">Compensating through the swing</h3>
+                    <p class="text-white/40 text-[15px] leading-relaxed">Your body routes around the restriction to get through the ball. The swing still happens, just on mechanics that cost you distance and accuracy.</p>
+                    <div class="stem stem-up h-8 mt-4"></div>
                 </div>
+                <div></div>
+            </div>
+
+            <!-- the chevrons -->
+            <div class="chev-strip reveal">
+                <div class="chev chev-1">
+                    <svg class="chev-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="chev-label text-white/75">Before the round</span>
+                </div>
+                <div class="chev chev-2">
+                    <svg class="chev-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                    </svg>
+                    <span class="chev-label text-white/85">On the course</span>
+                </div>
+                <div class="chev chev-3">
+                    <svg class="chev-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    <span class="chev-label text-white">The next day</span>
+                </div>
+            </div>
+
+            <!-- captions BELOW (desktop: outer two) -->
+            <div class="hidden md:grid grid-cols-3 gap-6 items-start">
+                <div class="text-center reveal px-2">
+                    <div class="stem h-8 mb-4"></div>
+                    <h3 class="font-heading text-xl font-semibold text-white mb-2">Stiff before you swing</h3>
+                    <p class="text-white/40 text-[15px] leading-relaxed">Mornings take longer than they used to. You're three holes in before your body feels like yours.</p>
+                </div>
+                <div></div>
+                <div class="text-center reveal px-2">
+                    <div class="stem h-8 mb-4"></div>
+                    <h3 class="font-heading text-xl font-semibold text-white mb-2">Sore longer afterward</h3>
+                    <p class="text-white/40 text-[15px] leading-relaxed">One round used to cost you nothing. Now it costs you the next two days.</p>
+                </div>
+            </div>
+
+            <!-- mobile captions sit inside their own stack -->
+            <div class="md:hidden space-y-6 mt-8">
+                <p class="text-white/40 text-[15px] leading-relaxed reveal"><span class="text-white font-semibold">Stiff before you swing.</span> Mornings take longer than they used to. You're three holes in before your body feels like yours.</p>
+                <p class="text-white/40 text-[15px] leading-relaxed reveal"><span class="text-white font-semibold">Compensating through the swing.</span> Your body routes around the restriction to get through the ball. The swing still happens, just on mechanics that cost you distance and accuracy.</p>
+                <p class="text-white/40 text-[15px] leading-relaxed reveal"><span class="text-white font-semibold">Sore longer afterward.</span> One round used to cost you nothing. Now it costs you the next two days.</p>
             </div>
         </div>
     </section>
