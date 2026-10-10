@@ -340,7 +340,11 @@ button:focus-visible {
 
     .chev-asides { display:flex; flex-direction:column; flex:1; }
     .chev-aside {
-        flex:1; display:flex; align-items:center;
+        /* Column, not row: as a row flex container the bold lead-in and the
+           description become two separate flex items side by side instead of
+           running as one block of text. */
+        flex:1; display:flex; flex-direction:column; justify-content:center;
         font-size:14px; line-height:1.55; color:rgba(255,255,255,.4);
     }
+    .chev-aside span { margin-bottom:6px; }
 }
