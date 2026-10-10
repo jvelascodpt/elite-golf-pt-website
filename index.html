@@ -63,7 +63,7 @@
 
     <!-- Custom CSS -->
     <link rel="alternate" type="application/rss+xml" title="Elite Golf PT Articles" href="/blog/feed.xml">
-    <link rel="stylesheet" href="css/styles.css?v=13">
+    <link rel="stylesheet" href="css/styles.css?v=14">
 
     <!-- Structured data: MedicalBusiness for local SEO -->
     <script type="application/ld+json">
@@ -420,7 +420,9 @@
                 <div></div>
             </div>
 
-            <!-- the chevrons -->
+            <!-- the chevrons; on mobile they narrow into a left column with
+                 each description sitting beside its own chevron -->
+            <div class="chev-layout">
             <div class="chev-strip reveal">
                 <div class="chev chev-1">
                     <svg class="chev-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -442,6 +444,14 @@
                 </div>
             </div>
 
+                <!-- mobile only: one description per chevron, alongside it -->
+                <div class="chev-asides md:hidden">
+                    <p class="chev-aside reveal"><span class="text-white font-semibold">Stiff before you swing.</span> Mornings take longer than they used to. You're three holes in before your body feels like yours.</p>
+                    <p class="chev-aside reveal"><span class="text-white font-semibold">Compensating through the swing.</span> Your body routes around the restriction to get through the ball. The swing still happens, just on mechanics that cost you distance and accuracy.</p>
+                    <p class="chev-aside reveal"><span class="text-white font-semibold">Sore longer afterward.</span> One round used to cost you nothing. Now it costs you the next two days.</p>
+                </div>
+            </div>
+
             <!-- captions BELOW (desktop: outer two) -->
             <div class="hidden md:grid grid-cols-3 gap-6 items-start">
                 <div class="text-center reveal px-2">
@@ -457,12 +467,6 @@
                 </div>
             </div>
 
-            <!-- mobile captions sit inside their own stack -->
-            <div class="md:hidden space-y-6 mt-8">
-                <p class="text-white/40 text-[15px] leading-relaxed reveal"><span class="text-white font-semibold">Stiff before you swing.</span> Mornings take longer than they used to. You're three holes in before your body feels like yours.</p>
-                <p class="text-white/40 text-[15px] leading-relaxed reveal"><span class="text-white font-semibold">Compensating through the swing.</span> Your body routes around the restriction to get through the ball. The swing still happens, just on mechanics that cost you distance and accuracy.</p>
-                <p class="text-white/40 text-[15px] leading-relaxed reveal"><span class="text-white font-semibold">Sore longer afterward.</span> One round used to cost you nothing. Now it costs you the next two days.</p>
-            </div>
         </div>
     </section>
 
