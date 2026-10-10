@@ -19,7 +19,7 @@ tailwind.config = { theme: { extend: {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=11">
+<link rel="stylesheet" href="css/styles.css?v=12">
 <style>
   body { background:#13131a; font-family:'Inter',system-ui,sans-serif; }
   .reveal { opacity:1 !important; transform:none !important; }   /* preview only */
@@ -55,11 +55,15 @@ tailwind.config = { theme: { extend: {
 
   @media (max-width: 767px) {
       .chev-strip { flex-direction:column; }
-      .chev, .chev:first-child {
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), 50% 100%, 0 calc(100% - 18px));
-          padding:24px 24px 38px; min-height:0; gap:14px;
+      .chev {
+          clip-path: polygon(0 0, 50% 34px, 100% 0, 100% calc(100% - 34px), 50% 100%, 0 calc(100% - 34px));
+          padding:54px 24px 58px; min-height:0; gap:14px;
       }
-      .chev + .chev { margin-left:0; margin-top:-18px; }
+      .chev:first-child {
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 34px), 50% 100%, 0 calc(100% - 34px));
+          padding-top:28px;
+      }
+      .chev + .chev { margin-left:0; margin-top:-34px; }
   }
 </style>
 </head>

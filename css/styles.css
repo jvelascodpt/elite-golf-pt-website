@@ -311,9 +311,15 @@ button:focus-visible {
 
 @media (max-width: 767px) {
     .chev-strip { flex-direction:column; }
-    .chev, .chev:first-child {
-        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), 50% 100%, 0 calc(100% - 18px));
-        padding:24px 24px 38px; min-height:0; gap:14px;
+    /* Top edge is notched to match the point below it, so stacked chevrons nest
+       instead of the next one painting over the previous one's point. */
+    .chev {
+        clip-path: polygon(0 0, 50% 34px, 100% 0, 100% calc(100% - 34px), 50% 100%, 0 calc(100% - 34px));
+        padding:54px 24px 58px; min-height:0; gap:14px;
     }
-    .chev + .chev { margin-left:0; margin-top:-18px; }
+    .chev:first-child {
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 34px), 50% 100%, 0 calc(100% - 34px));
+        padding-top:28px;
+    }
+    .chev + .chev { margin-left:0; margin-top:-34px; }
 }
