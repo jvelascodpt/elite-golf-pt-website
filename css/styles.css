@@ -319,7 +319,10 @@ button:focus-visible {
     }
     .chev:first-child {
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 34px), 50% 100%, 0 calc(100% - 34px));
-        padding-top:28px;
+        /* Full shorthand, not just padding-top: the desktop .chev:first-child
+           rule sets padding-left:40px and outranks .chev on specificity, which
+           would push this one's icon and label off centre. */
+        padding:24px 24px 58px;
     }
     .chev + .chev { margin-left:0; margin-top:-34px; }
 }
