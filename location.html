@@ -21,7 +21,7 @@
                         brand: { 900: '#0f2b18', 800: '#163d22', 700: '#1e5530', 600: '#276e3f', 500: '#2d8a4e', 400: '#3da863', 300: '#6bc285', 200: '#a3d9b1', 100: '#d1edda' },
                         gold: { 600: '#a8882e', 500: '#c9a84c', 400: '#d4b95f', 300: '#e0cc82', 200: '#eeddb0' }
                     },
-                    fontFamily: { heading: ['"Playfair Display"', 'Georgia', 'serif'], body: ['"Inter"', 'system-ui', 'sans-serif'] }
+                    fontFamily: { heading: ['"Barlow Condensed"', 'Impact', 'sans-serif'], body: ['"Inter"', 'system-ui', 'sans-serif'] }
                 }
             }
         }
@@ -29,9 +29,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css?v=15">
+    <link rel="stylesheet" href="css/styles.css?v=16">
 </head>
 <body class="font-body text-gray-300 bg-dark-950">
 
@@ -46,15 +46,14 @@
                     <img src="images/logo-white.png" alt="Elite Golf Physical Therapy" class="h-24 sm:h-28 w-auto">
                 </a>
 
-                <nav class="hidden md:flex items-center gap-4 lg:gap-5 xl:gap-7">
-                    <a href="index.html#services" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Services</a>
+                <nav class="hidden lg:flex items-center gap-4 lg:gap-5 xl:gap-7">
+                    <a href="index.html#paths" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Physical Therapy</a>
+                    <a href="index.html#power" class="nav-link text-gold-400 hover:text-gold-300 text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Power</a>
                     <a href="index.html#about" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">About</a>
                     <a href="education.html" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Our Method</a>
-                    <a href="blog/index.html" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Articles</a>
-                    <a href="index.html#how-it-works" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Process</a>
+                    <a href="index.html#reviews" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Reviews</a>
                     <a href="index.html#pricing" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Pricing</a>
-                    <a href="index.html#faq" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">FAQ</a>
-                    <a href="index.html#contact" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Contact</a>
+                    <a href="blog/index.html" class="nav-link text-white/60 hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Articles</a>
                     <a href="location.html" class="nav-link text-white hover:text-white text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300">Location</a>
                     <a href="https://app.acuityscheduling.com/schedule/d80e0bff" target="_blank" rel="noopener"
                        class="ml-2 px-7 py-3 bg-gold-500 hover:bg-gold-400 text-dark-950 font-bold text-xs tracking-[0.15em] uppercase transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,76,0.3)]">
@@ -62,7 +61,7 @@
                     </a>
                 </nav>
 
-                <button id="mobile-menu-btn" class="md:hidden text-white/80 p-2" aria-label="Open menu">
+                <button id="mobile-menu-btn" class="lg:hidden text-white/80 p-2" aria-label="Open menu">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -70,16 +69,17 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="md:hidden hidden bg-dark-950/98 backdrop-blur-xl border-t border-white/5">
+        <div id="mobile-menu" class="lg:hidden hidden bg-dark-950/98 backdrop-blur-xl border-t border-white/5">
             <div class="px-8 py-8 space-y-5">
-                <a href="index.html#services" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Services</a>
+                <a href="index.html#paths" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Physical Therapy</a>
+                <a href="index.html#power" class="mobile-nav-link block text-gold-400 hover:text-gold-300 text-sm font-medium tracking-wider uppercase py-2 transition-colors">Power</a>
                 <a href="index.html#about" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">About</a>
                 <a href="education.html" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Our Method</a>
-                <a href="blog/index.html" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Articles</a>
-                <a href="index.html#how-it-works" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Process</a>
+                <a href="index.html#reviews" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Reviews</a>
                 <a href="index.html#pricing" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Pricing</a>
                 <a href="index.html#faq" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">FAQ</a>
                 <a href="index.html#contact" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Contact</a>
+                <a href="blog/index.html" class="mobile-nav-link block text-white/60 hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Articles</a>
                 <a href="location.html" class="mobile-nav-link block text-white hover:text-white text-sm font-medium tracking-wider uppercase py-2 transition-colors">Location</a>
                 <a href="https://app.acuityscheduling.com/schedule/d80e0bff" target="_blank" rel="noopener"
                    class="block mt-6 text-center px-6 py-4 bg-gold-500 hover:bg-gold-400 text-dark-950 font-bold text-sm tracking-wider uppercase transition-all">
@@ -184,7 +184,8 @@
                 <div>
                     <h4 class="text-white/50 text-xs font-medium tracking-[0.2em] uppercase mb-6">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html#services" class="text-white/30 hover:text-white text-sm transition-colors duration-300">Services</a></li>
+                        <li><a href="index.html#paths" class="text-white/30 hover:text-white text-sm transition-colors duration-300">Physical Therapy</a></li>
+                        <li><a href="index.html#power" class="text-white/30 hover:text-white text-sm transition-colors duration-300">Power Assessment</a></li>
                         <li><a href="index.html#about" class="text-white/30 hover:text-white text-sm transition-colors duration-300">About</a></li>
                         <li><a href="index.html#pricing" class="text-white/30 hover:text-white text-sm transition-colors duration-300">Pricing</a></li>
                         <li><a href="index.html#faq" class="text-white/30 hover:text-white text-sm transition-colors duration-300">FAQ</a></li>

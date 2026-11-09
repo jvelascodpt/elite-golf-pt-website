@@ -5,10 +5,49 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Sporty type system: Barlow Condensed for headings, labels, buttons and nav.
+   Inter (body) stays for anything people read in sentences. */
 .font-heading,
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: 'Barlow Condensed', Impact, 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
 }
+
+h1, h2 {
+    font-style: italic;
+    font-weight: 900;
+    line-height: 0.92;
+}
+
+h3, h4 {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+}
+
+/* Big numerals and display lines set with .font-heading outside h-tags */
+p.font-heading, div.font-heading, span.font-heading {
+    font-style: italic;
+    font-weight: 800;
+}
+
+/* Pull quotes keep sentence case so they stay readable */
+blockquote .font-heading {
+    text-transform: none;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Small uppercase labels, buttons and nav links */
+.uppercase {
+    font-family: 'Barlow Condensed', Impact, 'Arial Narrow', sans-serif;
+    font-weight: 700;
+}
+.uppercase[class*="text-xs"] { font-size: 0.9rem; }
+.uppercase[class*="text-[11px]"],
+.uppercase[class*="text-[10px]"],
+.uppercase[class*="text-[9px]"] { font-size: 0.8rem; }
 
 /* ==================== AMBIENT SIDE GLOW ==================== */
 /* Narrow vertical gold bars fixed to the left and right viewport edges.
@@ -190,8 +229,8 @@ h1, h2, h3, h4 {
    Higher specificity than the Tailwind utilities so it reliably overrides them. */
 @media (min-width: 768px) {
     #header .nav-link {
-        letter-spacing: 0.08em;
-        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        font-size: 0.85rem;
     }
 }
 
