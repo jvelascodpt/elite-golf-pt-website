@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGG7VCXDXZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HGG7VCXDXZ');
+    </script>
     <meta name="google-site-verification" content="tLO_0lfPfezQtW1m9EFyWLAVrWuHtCX6uaoQLfKQzZE" />
     <title>Golf Physical Therapy San Diego | TPI Certified | Elite Golf PT</title>
     <meta name="description" content="Golf-specific physical therapy and TPI power training in San Diego. TPI Certified. Improve motion, build power, and golf better. Book your evaluation today.">
@@ -865,6 +873,7 @@
                         if (response.ok) {
                             form.reset();
                             successEl.classList.remove('hidden');
+                            if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'contact_inquiry' });
                         } else {
                             errorEl.classList.remove('hidden');
                         }
@@ -985,5 +994,6 @@
             if (days < 14) el.insertAdjacentHTML('afterend', ' <span class="g-new">New</span>');
         });
     </script>
+    <script src="js/analytics.js?v=1"></script>
 </body>
 </html>
