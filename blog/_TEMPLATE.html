@@ -10,7 +10,14 @@
   4. Add the new article to:
        - blog/index.html  (copy an existing <article> card)
        - sitemap.xml      (add a <url> entry)
-  5. Commit + push to publish.
+       - blog/feed.xml    (new <item> first; this emails Mailchimp subscribers)
+  5. STYLES: the site uses a pre-built stylesheet (css/tailwind.css), not the
+     Tailwind CDN. Prefer classes already used in this template and the other
+     articles. After writing, always rebuild so any new class is included:
+       tailwindcss -c tailwind.config.js -i css/tailwind.src.css -o css/tailwind.css --minify
+     (standalone CLI v3.4.17 from github.com/tailwindlabs/tailwindcss/releases)
+     and commit css/tailwind.css with the article if it changed.
+  6. Commit + push to publish.
 
   Tip: the easiest path is to just ask Claude Code:
   "Write a new blog article about <topic> using the template" — it will fill
@@ -24,7 +31,7 @@
     <title>{{TITLE}} | Elite Golf PT</title>
     <meta name="description" content="{{META_DESCRIPTION — 150-160 chars, include main keyword + San Diego}}">
     <meta name="keywords" content="{{KEYWORDS — comma separated}}">
-    <meta name="author" content="Dr. Jeremy Velasco, PT, DPT">
+    <meta name="author" content="Dr. Jeremy Velasco, PT, DPT, CPT, TPI">
     <link rel="canonical" href="https://elitegolfphysicaltherapy.com/blog/{{SLUG}}.html">
 
     <!-- Open Graph -->
@@ -35,7 +42,7 @@
     <meta property="og:image" content="https://elitegolfphysicaltherapy.com/images/{{OG_IMAGE}}">
     <meta property="og:site_name" content="Elite Golf Physical Therapy">
     <meta property="article:published_time" content="{{YYYY-MM-DD}}">
-    <meta property="article:author" content="Dr. Jeremy Velasco, PT, DPT">
+    <meta property="article:author" content="Dr. Jeremy Velasco, PT, DPT, CPT, TPI">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -172,9 +179,9 @@
             </h1>
 
             <div class="flex items-center gap-4 border-t border-white/10 pt-6">
-                <img loading="lazy" src="../images/jeremy-avatar.png" alt="Dr. Jeremy Velasco, PT, DPT" class="h-12 w-12 rounded-full object-cover bg-dark-700">
+                <img src="../images/jeremy-avatar.png" alt="Dr. Jeremy Velasco, PT, DPT, CPT, TPI" class="h-12 w-12 rounded-full object-cover bg-dark-700">
                 <div class="text-sm">
-                    <p class="text-white font-medium">Dr. Jeremy Velasco, PT, DPT</p>
+                    <p class="text-white font-medium">Dr. Jeremy Velasco, PT, DPT, CPT, TPI</p>
                     <p class="text-white/40">Owner, Elite Golf PT &nbsp;&middot;&nbsp; <time datetime="{{YYYY-MM-DD}}">{{Month DD, YYYY}}</time> &nbsp;&middot;&nbsp; {{N}} min read</p>
                 </div>
             </div>
@@ -223,7 +230,7 @@
 
                 <!-- Disclaimer (keep on health articles) -->
                 <p class="text-sm text-white/40 border-t border-white/10 pt-6 mt-10">
-                    <strong class="text-white/60">Note:</strong> This article is for general education and isn't a substitute for an individualized medical evaluation. If you have significant or persistent pain, please consult a qualified healthcare provider before starting new exercises.
+                    <strong class="text-white/60">Note:</strong> This article is for general education and isn't a substitute for an individualized medical evaluation. Before starting new exercises, especially if you have significant or persistent pain, we recommend a thorough evaluation with a Doctor of Physical Therapy first. <a href="https://app.acuityscheduling.com/schedule/d80e0bff" target="_blank" rel="noopener" class="text-brand-400 hover:text-brand-300 underline">Book an evaluation</a> so your plan is built around what your body actually needs.
                 </p>
             </div>
         </div>
