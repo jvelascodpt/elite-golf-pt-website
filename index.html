@@ -67,10 +67,52 @@
         "latitude": 32.8286527,
         "longitude": -117.2295449
       },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "San Diego County"
-      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "San Diego County"
+        },
+        {
+          "@type": "Place",
+          "name": "Clairemont, San Diego, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "Bay Park, San Diego, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "Linda Vista, San Diego, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "Pacific Beach, San Diego, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "Mission Bay, San Diego, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "Mission Valley, San Diego, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "La Jolla, San Diego, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "University City, San Diego, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "Point Loma, San Diego, CA"
+        },
+        {
+          "@type": "Place",
+          "name": "Ocean Beach, San Diego, CA"
+        }
+      ],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -293,7 +335,7 @@
     <!-- ==================== HERO ==================== -->
     <section id="hero" class="relative overflow-hidden">
         <div class="absolute inset-0 bg-dark-950">
-            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <video autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
                 <source src="images/hero-video.mp4" type="video/mp4">
             </video>
         </div>

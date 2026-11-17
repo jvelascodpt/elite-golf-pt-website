@@ -44,8 +44,9 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
-# Everyone else (Google, Bing, etc.): slow down to one page per 10 seconds
+# Everyone else (Google, Bing, etc.): full access, no crawl delay.
+# Bing honours Crawl-delay, and Bing also feeds ChatGPT search.
 User-agent: *
-Crawl-delay: 10
+Allow: /
 
 Sitemap: https://elitegolfphysicaltherapy.com/sitemap.xml
