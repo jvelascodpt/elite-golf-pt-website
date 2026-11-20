@@ -35,6 +35,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css?v=16">
     <link rel="stylesheet" href="css/tailwind.css?v=1">
+    <!-- Black Friday sale (ends Nov 30, 2026). The script at the bottom of the page swaps back to regular prices on Dec 1. -->
+    <style>
+        .bf-was { text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: rgba(201,168,76,.85); opacity: .45; font-size: .6em; margin-right: .4rem; }
+        .bf-was-inline { text-decoration: line-through; text-decoration-thickness: 2px; opacity: .6; margin-right: .3rem; }
+        .bf-note { color: #e3c77a; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .25rem; white-space: nowrap; }
+        .bf-off { display: none !important; }
+    </style>
 </head>
 <body class="font-body text-gray-300 bg-dark-950">
 
@@ -231,7 +238,7 @@
                 </a>
                 <a href="https://app.acuityscheduling.com/schedule.php?owner=37769548&amp;appointmentType=100302653" target="_blank" rel="noopener"
                    class="px-10 py-6 border border-gold-500/60 hover:border-gold-400 text-gold-400 hover:text-gold-300 font-bold text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:bg-gold-500/10">
-                    Power Assessment &middot; $299 &middot; Dec
+                    Power Assessment &middot; <span class="bf-sale"><span class="bf-was-inline">$299</span>$224.25</span><span class="bf-regular bf-off">$299</span> &middot; Dec
                 </a>
                 <a href="https://app.acuityscheduling.com/schedule/d80e0bff" target="_blank" rel="noopener"
                    class="px-10 py-6 border border-white/20 hover:border-white/40 text-white/80 hover:text-white font-medium text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:bg-white/5">
@@ -296,5 +303,12 @@
 
     <script src="js/main.js?v=5"></script>
     <script src="js/analytics.js?v=1"></script>
+    <script>
+        // Black Friday: after Nov 30, 2026 (Pacific), hide the sale and show regular prices again.
+        if (Date.now() >= Date.parse('2026-12-01T00:00:00-08:00')) {
+            document.querySelectorAll('.bf-sale').forEach(function (e) { e.classList.add('bf-off'); });
+            document.querySelectorAll('.bf-regular').forEach(function (e) { e.classList.remove('bf-off'); });
+        }
+    </script>
 </body>
 </html>

@@ -37,6 +37,13 @@
     <link rel="alternate" type="application/rss+xml" title="Elite Golf PT Articles" href="/blog/feed.xml">
     <link rel="stylesheet" href="css/styles.css?v=16">
     <link rel="stylesheet" href="css/tailwind.css?v=1">
+    <!-- Black Friday sale (ends Nov 30, 2026). The script at the bottom of the page swaps back to regular prices on Dec 1. -->
+    <style>
+        .bf-was { text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: rgba(201,168,76,.85); opacity: .45; font-size: .6em; margin-right: .4rem; }
+        .bf-was-inline { text-decoration: line-through; text-decoration-thickness: 2px; opacity: .6; margin-right: .3rem; }
+        .bf-note { color: #e3c77a; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .25rem; white-space: nowrap; }
+        .bf-off { display: none !important; }
+    </style>
 
     <!-- Structured data: MedicalBusiness for local SEO -->
     <script type="application/ld+json">
@@ -276,8 +283,15 @@
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
         <!-- Announcement bar -->
         <div class="bg-brand-800 text-center py-2.5 px-4 text-sm">
-            <span class="text-white/80">New for golfers who want more distance:</span>
-            <a href="#power" class="text-gold-300 font-semibold underline underline-offset-4 decoration-gold-500/50 hover:text-gold-200 ml-1">TPI Power Assessment, coming this December &rarr;</a>
+            <span class="bf-sale">
+                <span class="text-white font-semibold">Black Friday Sale:</span>
+                <span class="text-white/80">25% off the PT Evaluation &amp; TPI Power Assessment, ends Nov 30.</span>
+                <a href="#pricing" class="text-gold-300 font-semibold underline underline-offset-4 decoration-gold-500/50 hover:text-gold-200 ml-1">See prices &rarr;</a>
+            </span>
+            <span class="bf-regular bf-off">
+                <span class="text-white/80">New for golfers who want more distance:</span>
+                <a href="#power" class="text-gold-300 font-semibold underline underline-offset-4 decoration-gold-500/50 hover:text-gold-200 ml-1">TPI Power Assessment, coming this December &rarr;</a>
+            </span>
         </div>
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div class="flex items-center justify-between h-28">
@@ -581,7 +595,8 @@
                     <span class="absolute -top-3 left-8 px-3 py-1 bg-motion text-dark-950 text-[10px] font-bold tracking-[0.2em] uppercase">Most Popular</span>
                     <p class="text-motion text-[11px] font-bold tracking-[0.25em] uppercase mb-3">Pain &amp; Mobility</p>
                     <h3 class="font-heading text-2xl text-white mb-2">PT Evaluation</h3>
-                    <p class="text-white text-4xl font-semibold mb-1">$249</p>
+                    <p class="bf-note bf-sale">Black Friday · 25% off · ends 11/30</p>
+                    <p class="text-white text-4xl font-semibold mb-1"><span class="bf-sale"><span class="bf-was">$249</span>$186.75</span><span class="bf-regular bf-off">$249</span></p>
                     <p class="text-white/40 text-xs mb-6">1 hour</p>
                     <ul class="text-white/60 text-sm space-y-2.5 mb-8 flex-1">
                         <li class="flex gap-2"><span class="text-motion">✓</span>TPI medical screening</li>
@@ -598,7 +613,8 @@
                     <span class="absolute -top-3 left-8 px-3 py-1 bg-gold-500 text-dark-950 text-[10px] font-bold tracking-[0.2em] uppercase">New · Coming December</span>
                     <p class="text-gold-400 text-[11px] font-bold tracking-[0.25em] uppercase mb-3">Power &amp; Speed</p>
                     <h3 class="font-heading text-2xl text-white mb-2">TPI Power Assessment</h3>
-                    <p class="text-white text-4xl font-semibold mb-1">$299</p>
+                    <p class="bf-note bf-sale">Black Friday · 25% off · ends 11/30</p>
+                    <p class="text-white text-4xl font-semibold mb-1"><span class="bf-sale"><span class="bf-was">$299</span>$224.25</span><span class="bf-regular bf-off">$299</span></p>
                     <p class="text-white/40 text-xs mb-6">1 hour · New service, launching December</p>
                     <ul class="text-white/60 text-sm space-y-2.5 mb-8 flex-1">
                         <li class="flex gap-2"><span class="text-gold-400">✓</span>In-depth data points on every test</li>
@@ -941,8 +957,8 @@
             </h2>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="https://app.acuityscheduling.com/schedule/d80e0bff" target="_blank" rel="noopener"
-                   class="w-full sm:w-auto px-8 py-5 bg-motion hover:bg-motion-light text-dark-950 font-bold text-xs tracking-[0.15em] uppercase">PT Evaluation · $249</a>
-                <a href="https://app.acuityscheduling.com/schedule.php?owner=37769548&amp;appointmentType=100302653" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-5 bg-gold-500 hover:bg-gold-400 text-dark-950 font-bold text-xs tracking-[0.15em] uppercase">Power Assessment · $299 · Dec</a>
+                   class="w-full sm:w-auto px-8 py-5 bg-motion hover:bg-motion-light text-dark-950 font-bold text-xs tracking-[0.15em] uppercase">PT Evaluation · <span class="bf-sale"><span class="bf-was-inline">$249</span>$186.75</span><span class="bf-regular bf-off">$249</span></a>
+                <a href="https://app.acuityscheduling.com/schedule.php?owner=37769548&amp;appointmentType=100302653" target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-5 bg-gold-500 hover:bg-gold-400 text-dark-950 font-bold text-xs tracking-[0.15em] uppercase">Power Assessment · <span class="bf-sale"><span class="bf-was-inline">$299</span>$224.25</span><span class="bf-regular bf-off">$299</span> · Dec</a>
             </div>
             <p class="text-white/40 text-sm mt-6">Questions first? Call <a href="tel:6197362955" class="text-white/70 hover:text-white">619-736-2955</a> or <a href="https://app.acuityscheduling.com/schedule/d80e0bff" target="_blank" rel="noopener" class="text-white/70 underline underline-offset-4 decoration-motion/60 hover:text-motion hover:decoration-motion transition-colors">book a free phone consultation</a>.</p>
         </div>
@@ -1039,5 +1055,12 @@
         });
     </script>
     <script src="js/analytics.js?v=1"></script>
+    <script>
+        // Black Friday: after Nov 30, 2026 (Pacific), hide the sale and show regular prices again.
+        if (Date.now() >= Date.parse('2026-12-01T00:00:00-08:00')) {
+            document.querySelectorAll('.bf-sale').forEach(function (e) { e.classList.add('bf-off'); });
+            document.querySelectorAll('.bf-regular').forEach(function (e) { e.classList.remove('bf-off'); });
+        }
+    </script>
 </body>
 </html>
